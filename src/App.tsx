@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef } from 'react';
+import './App.scss';
+
+
 
 function App() {
+  const myFood = useRef();
+
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+      <div className='main'>
+
+        <div className="stage">
+          <div className='snake'></div>
+          <div className='food'></div>
+        </div>
+        <div className="score-panel">
+          <div>SCORE:<span>1</span></div>
+          <div>LEVEL:<span>3</span></div>
+        </div>
+      </div>
     </div>
   );
 }
